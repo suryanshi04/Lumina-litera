@@ -1,0 +1,77 @@
+body {
+    background: url(home1.jpg) ;
+    display: flex;
+    height: 100vh;
+    margin: 0;
+}
+h1{
+    color: white;
+    margin-left: 10px;
+    display: flex;
+
+}
+
+.bookshelf {
+    margin-left: 10px;
+    margin-top: 20px;
+    height: 500px;
+    width: 400px;
+    background-color: rgb(49, 5, 67);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.book {
+    width: 80px;
+    height: 120px;
+    background-color: #fff;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.book:hover {
+    width: 100px;
+    height: 140px;
+    background-color: #fff;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.book-title {
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.book-author {
+    font-size: 10px;
+    color: #757575;
+    text-align: center;
+}
+.contents{
+    background:url(main1.jpg);
+    width: 500px;
+    height: 300px;
+    border-radius: 10px;
+    margin: 110px;
+    margin-top: 80px;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <h1>My library</h1>
+        <div class="bookshelf">
+        <table>
+            <tr>
+                <td>
+                    <div class="book" id="book1" onclick="openBookPage('book1')">
+                    <div class="book-title">Book Title 1</div>
+                    <div class="book-author">Author 1</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="book" id="book2" onclick="openBookPage('book3')">
+                    <div class="book-title">Book Title 1</div>
+                    <div class="book-author">Author 1</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="book" id="book3" onclick="openBookPage('book3')">
+                    <div class="book-title">Book Title 1</div>
+                    <div class="book-author">Author 1</div>
+                    </div>
+                </td>
+            <tr>
+                <td>
+                    <div class="book" id="book4" onclick="openBookPage('book3')">
+                        <div class="book-title">Book Title 2</div>
+                        <div class="book-author">Author 2</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="book" id="book5" onclick="openBookPage('book3')">
+                    <div class="book-title">Book Title 1</div>
+                    <div class="book-author">Author 1</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="book" id="book6" onclick="openBookPage('book3')">
+                    <div class="book-title">Book Title 1</div>
+                    <div class="book-author">Author 1</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="book" id="book7" onclick="openBookPage('book3')">
+                        <div class="book-title">Book Title 3</div>
+                        <div class="book-author">Author 3</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="book" id="book8" onclick="openBookPage('book3')">
+                    <div class="book-title">Book Title 1</div>
+                    <div class="book-author">Author 1</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="book" id="book9" onclick="openBookPage('book3')">
+                    <div class="book-title">Book Title 1</div>
+                    <div class="book-author">Author 1</div>
+                    </div>
+                </td>
+            </tr>
+            </table>
+        </div>
+    <div class="contents">
+        <label for="bookSelector">Select Book:</label>
+        <select id="bookSelector" class="edit-input">
+            <option value="book1">Book 1</option>
+            <option value="book2">Book 2</option>
+            <option value="book3">Book 3</option>
+            <option value="book3">Book 4</option>
+            <option value="book3">Book 5</option>
+            <option value="book3">Book 6</option>
+            <option value="book3">Book 7</option>
+            <option value="book3">Book 8</option>
+            <option value="book3">Book 9</option>
+        </select>
+
+        <label for="newTitle">New Title:</label>
+        <input type="text" id="newTitle" class="edit-input" placeholder="Enter new title">
+        
+        <label for="newAuthor">New Author:</label>
+        <input type="text" id="newAuthor" class="edit-input" placeholder="Enter new author">
+
+        <button onclick="updateBookInfo()">Update Book Info</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <h2>Edit Profile</h2>
+    <fieldset>
+        <center>
+        <label for="profilePicture">Profile Picture:</label>
+        <div class="profile-picture-container">
+            <img id="preview" src="signin.gif" alt="Profile Preview">
+        </div>
+        <input type="file" id="profilePicture" name="profilePicture" accept="image/*" onchange="previewImage(this)">
+        
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <br>
+        <button type="submit">Update Profile</button>
+    </form>
+    </center>
+    </fieldset>
+    <script>
+        function previewImage(input) {
+            var preview = document.getElementById('preview');
+            var file = input.files[0];
+            var reader = new FileReader();
+
+            reader.onloadend = function () {
+                preview.src = reader.result;
+            };
+
+            if (file) {
+                reader.readAsDataURL(file);
+            } else {
+                preview.src = "#";
+            }
+        }
+    </script>
+</body>
+</html>

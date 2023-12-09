@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sideways Bookshelf</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .bookshelf {
+            width: 400px;
+            background-color: #8d6e63;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            overflow-x: auto; /* Enable horizontal scrolling */
+        }
+
+        .book {
+            width: 120px;
+            height: 80px;
+            background-color: #fff;
+            margin: 10px;
+            padding: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            transform: rotate(-90deg); /* Rotate the book */
+            white-space: nowrap; /* Prevent text wrapping */
+        }
+
+        .book-title, .book-author {
+            font-size: 12px;
+            text-align: center;
+            transform: rotate(90deg); /* Rotate text back to normal */
+        }
+
+        .edit-form {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .edit-input {
+            margin: 5px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="bookshelf">
+        <div class="book" id="book1">
+            <div class="book-title">Book Title 1</div>
+            <div class="book-author">Author 1</div>
+        </div>
+        <div class="book" id="book2">
+            <div class="book-title">Book Title 2</div>
+            <div class="book-author">Author 2</div>
+        </div>
+        <div class="book" id="book3">
+            <div class="book-title">Book Title 3</div>
+            <div class="book-author">Author 3</div>
+        </div>
+        <!-- Add more books as needed -->
+    </div>
+
+    <div class="edit-form">
+        <label for="bookSelector">Select Book:</label>
+        <select id="bookSelector" class="edit-input">
+            <option value="book1">Book 1</option>
+            <option value="book2">Book 2</option>
+            <option value="book3">Book 3</option>
+            <!-- Add more options for additional books -->
+        </select>
+
+        <label for="newTitle">New Title:</label>
+        <input type="text" id="newTitle" class="edit-input" placeholder="Enter new title">
+        
+        <label for="newAuthor">New Author:</label>
+        <input type="text" id="newAuthor" class="edit-input" placeholder="Enter new author">
+
+        <button onclick="updateBookInfo()">Update Book Info</button>
+    </div>
+
+    <script>
+        // JavaScript to dynamically change book title and author
+        function changeBookInfo(bookId, newTitle, newAuthor) {
+            const book = document.getElementById(bookId);
+
+            if (book) {
+                const titleElement = book.querySelector('.book-title');
+                const authorElement = book.querySelector('.book-author');
+
+                if (titleElement && authorElement) {
+                    titleElement.textContent = newTitle;
+                    authorElement.textContent = newAuthor;
+                }
+            }
+        }
+
+        // JavaScript function to update book info based on user input
+        function updateBookInfo() {
+            const selectedBookId = document.getElementById('bookSelector').value;
+            const newTitle = document.getElementById('newTitle').value;
+            const newAuthor = document.getElementById('newAuthor').value;
+
+            changeBookInfo(selectedBookId, newTitle, newAuthor);
+        }
+    </script>
+</body>
+</html>
